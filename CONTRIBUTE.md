@@ -8,7 +8,7 @@ ___
 
 ### Commits:
 
-When adding files to the staging-area, make sure that the files you add are necessary. Try not to clutter up the repo with files produces by the OS -- i.e _.DS_store_ on mac -- or any config file produces by text-formatting tools or IDE's (VSCode and pycharm). Directories produced by the python-interpreter should also not be added to the repo, mainly  _\_\_pychache\_\__. Take a look at [.gitignore](https://git-scm.com/docs/gitignore)
+When adding files to the staging-area, make sure that the files you add are necessary. Try not to clutter up the repo with files produces by the OS -- i.e _.DS_store_ on mac -- or any config file produces by text-formatting tools or IDE's (VSCode and pycharm). Directories produced by the python-interpreter should also not be added to the repo, mainly  _\_\_pychache\_\__. _(Take a look at [.gitignore](https://git-scm.com/docs/gitignore))_
 
 Commit often, and try to use informative commit-messages. Don't try to describe the changes you have made in the code, but rather try and describe how the code changes the program.
 
