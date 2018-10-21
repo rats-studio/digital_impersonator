@@ -1,20 +1,21 @@
-# Contributing
-___
 If not explicitly discussed or arranged with the `code evangelist`, no one should directly edit this repository in any way. To make contributions, use the procedure described in `How to contribute`.
 
-
-## Keep in mind:
 ___
 
+# Contributing:
+
+## Keep in mind:
+
 ### Commits:
-Commit often, and try to make informative commit-messages. Don't try to describe the changes you have made in the code, but rather try and describe how the code changes the program.
+
+When adding files to the staging-area, make sure that the files you add are necessary. Try not to clutter up the repo with files produces by the OS -- i.e _.DS_store_ on mac -- or any config file produces by text-formatting tools or IDE's (VSCode and pycharm). Directories produced by the python-interpreter should also not be added to the repo, mainly  _\_\_pychache\_\__. Take a look at [.gitignore](https://git-scm.com/docs/gitignore)
+
+Commit often, and try to use informative commit-messages. Don't try to describe the changes you have made in the code, but rather try and describe how the code changes the program.
 
 ### Code-Style:
 Adhere to [PEP8](https://www.python.org/dev/peps/pep-0008/) or [Googles Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md). Be sure to comment your code thoroughly.
 
-
 ## How to contribute:
-___
 
 1. Fork the repository to your own github-account. 
 2. Clone your repository into a directory on your local machine
