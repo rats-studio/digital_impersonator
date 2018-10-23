@@ -31,8 +31,6 @@ Now you can update your own repo simple as:
 >>> git pull upstream master
 ```
 
-**Configure upstream remote:**
-
 ## How to contribute:
 
 1. Fork the repository to your own github-account. 
