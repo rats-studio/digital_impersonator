@@ -1,7 +1,12 @@
-import nltk
 import random
 import string
+
+import nltk
+### Uncomment and run only once - Kent
+# nltk.download("stopwords")
+
 import numpy as np
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -13,7 +18,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 class Quote(object):
-
 
     @staticmethod
     def quote(user_input):
@@ -29,7 +33,6 @@ class Quote(object):
         word_tokenizer = nltk.word_tokenize(
             raw, "english", preserve_line=True)
 
-
         # stop words:
         stop_words = set(nltk.corpus.stopwords.words("english"))
 
@@ -37,15 +40,11 @@ class Quote(object):
         lemmer = nltk.stem.WordNetLemmatizer()
 
         l1 = lemmer.lemmatize("running")
-        print(l1)
-
 
         def LemTokens(tokens):
             return [lemmer.lemmatize(token) for token in tokens]
 
-
         remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
-
 
         def LemNormalize(text):
             return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
@@ -57,7 +56,6 @@ class Quote(object):
         # print(s1)
 
         # stop words:
-
 
         def response(user_input):
             stop_words = set(nltk.corpus.stopwords.words("english"))
@@ -71,11 +69,12 @@ class Quote(object):
             robo_response = sent_tokenizer[idx]
             return(robo_response)
 
-
         sent_tokenizer.append(user_input)
         word_tokens = word_tokenizer+nltk.word_tokenize(user_input)
         final_words = list(set(word_tokens))
+
         return response(user_input)
+
 
 if __name__ == "__main__":
     print(Quote.quote(input("Input something\n> ")))

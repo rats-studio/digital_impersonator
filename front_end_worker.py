@@ -14,7 +14,6 @@ JSON_FILE = 'saved_entries.json'
 
 
 def send_to_processor(to_send):
-    print(f"Sent '{to_send}' to processor.")
     requests.post("http://127.0.0.1:5001/processor/", json=to_send)
 
 
@@ -43,11 +42,11 @@ class GetQuote(Resource):
         print("\n--Connection init--")
 
         # request.get_json retursn the json-obj as a python-dict()
-        to_send = request.get_json()
-        send_to_processor(to_send)
-        print("Sleeping")
-        to_return = load_json_file()
-        return to_return
+        user_input = request.get_json()
+        send_to_processor(user_input)
+
+        response = load_json_file()
+        return response
 
 
 class Recieve(Resource):
@@ -55,7 +54,6 @@ class Recieve(Resource):
     def post(self):
         # extract entry from json before saving to file
         to_save = request.get_json()
-        print(to_save)
         update_json_file(to_save)
 
 
