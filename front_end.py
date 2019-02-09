@@ -11,26 +11,23 @@ def index():
     Takes input-string and passes it through the communicator class
     """
 
-    # set output to none
-    output = None
-
-    print("maggormaggormaggor")
+    # set response to none
+    response = None
 
     # check for http-request
     if request.method == "POST":
 
         # fetch data in request
-        entry = request.form["aar_input"]
-        print("!!!" + entry)
+        user_input = request.form["user_input"]
 
         # put data into python-dict to use as json
-        entry = {"entry_string": entry}
+        user_input = {"user_input": user_input}
 
-        # send through Communicator  and store response in 'output'
-        output = Communicator.send_recieve(entry)
+        # send through Communicator and store response in 'output'
+        response = Communicator.send_recieve(user_input)
 
     # render webapp
-    return render_template("index.html", output=output)
+    return render_template("index.html", output=response)
 
 
 if __name__ == "__main__":
