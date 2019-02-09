@@ -16,5 +16,11 @@ To run the front-end, launch *front_end.py* to communicate with the services. Yo
 curl 127.0.0.1:5000/ask/ -d "This is a test."
 ```
 
-TODO
+**TODO:**
 * Implement HTTPS
+
+**More TODO's:**
+* route all requests through communicator.py, or remove communicator all together
+* front-end/back-end-files into python packages
+* think about config.py-file for settings (handy for future security-stuff as well)
+* docstrings docstrings docstrings
