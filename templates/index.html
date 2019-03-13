@@ -1,102 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
-    <title>Unprecidential Chatbot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title> Ask and Recieve</title>
 </head>
 
 <body>
-    <section class="hero is-fullheight has-background-white-ter">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns">
 
-                    <!-- COLUMN LEFT SIDE-->
-                    <div class="column is-half">
-
-                        <!-- HEADING -->
-                        <div class="block">
-                            <h1 class="title is-1">Donald Trump Chatbot</h1>
-                        </div>
-
-                        <!-- TERMS AND CONDITIONS -->
-                        <div class="field">
-                            <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    I agree to the <a href="#">terms and conditions</a>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- SUBMIT/CANCEL BUTTONS -->
-                        <div class="field is-grouped">
-                            <div class="control">
-                                <button class="button is-link">Submit</button>
-                            </div>
-                            <div class="control">
-                                <button class="button is-danger">Cancel</button>
-                            </div>
-                        </div>
-
-                        <!-- USERNAME INPUT  AND SUBMIT BUTTON -->
-                        <div class="field has-addons">
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Username">
-                            </div>
-                            <div class="control">
-                                <a class="button is-link">
-                                    Enter
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- DISPLAY CONVERSATION TEXT -->
-                        <div class="field">
-                            <label class="label">Chat Display</label>
-                        </div>
-
-                        <!-- ACTUAL DISPLAY OF CONVERSATION TEXT AREA -->
-                        <textarea class="textarea" readonly rows="15"></textarea>
-
-                        <!-- USER CONVERSATION INPUT TEXT AREA -->
-                        <div class="field">
-                            <label class="label">Text input field</label>
-                            <div class="control">
-                                <input class="input is-primary" type="text"> 
-                            </div>
-                        </div>
-
-                        <!-- SEND MESSAGE BUTTON -->
-                        <div class="block">
-                                <a class="button is-primary is-medium" type="submit" value="Submit input">Submit</a>
-                        </div>
-                    </div>
-
-                    <!-- COLUMN RIGHT SIDE -->
-                    <div class="column">
-
-                        <!-- USE LEVEL CLASS TO ALIGN IMAGE -->
-                        <nav class="level">
-                            <div class="level-item has-text-centered">
-
-                                <!-- RIGHT SIDE IMAGE -->
-                                <figure class="image center is-150x150">
-                                    <img src="https://cdn.pixabay.com/photo/2018/02/19/20/47/donald-trump-3166237_960_720.png">
-                                </figure>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Impersonator</h1>
         </div>
-        <div style="margin-top:500px"></div>
-    </section>
+    </div>
+
+    <div class="container">
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Input:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" style="height: 150px" name="user_input"></textarea>
+            </div>
+            <button class="btn btn-primary mb-3" type="submit" value="submit">Submit</button>
+        </form>
+
+        <input class="form-control" type="text" style="height:150px" placeholder="{% if output %}{{ output }} {% endif %}"
+            readonly>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid mb-0" style="height:10px;
+            position:absolute; bottom:0px;width:100%;">
+        <div class="container">
+            <p class="lead"><a href="https://github.com/rats-studio/digital_impersonator">R.A.T.S 2018</a></p>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
