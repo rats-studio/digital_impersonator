@@ -41,7 +41,7 @@ class GetQuote(Resource):
     def post(self):
         print("\n--Connection init--")
 
-        # request.get_json retursn the json-obj as a python-dict()
+        # request.get_json returns the json-obj as a python-dict()
         user_input = request.get_json()
         send_to_processor(user_input)
 
