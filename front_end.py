@@ -1,7 +1,7 @@
 from communicator import Communicator
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 
 @app.route("/", methods=["POST", "GET"])
@@ -18,10 +18,10 @@ def index():
     if request.method == "POST":
 
         # fetch data in request
-        user_input = request.form["user_input"]
+        user_input = request.form["submit"]
 
         # put data into python-dict to use as json
-        user_input = {"user_input": user_input}
+        user_input = {"submit": user_input}
 
         # send through Communicator and store response in 'output'
         response = Communicator.send_recieve(user_input)
