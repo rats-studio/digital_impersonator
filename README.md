@@ -24,3 +24,4 @@ curl 127.0.0.1:5000/ask/ -d "This is a test."
 * front-end/back-end-files into python packages
 * think about config.py-file for settings (handy for future security-stuff as well)
 * docstrings docstrings docstrings
+
