@@ -2,7 +2,7 @@ import random
 import string
 
 import nltk
-### Uncomment and run only once - Kent
+# Uncomment and run only once - Kent
 # nltk.download("stopwords")
 
 import numpy as np
@@ -44,7 +44,8 @@ class Quote(object):
         def LemTokens(tokens):
             return [lemmer.lemmatize(token) for token in tokens]
 
-        remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
+        remove_punct_dict = dict((ord(punct), None)
+                                 for punct in string.punctuation)
 
         def LemNormalize(text):
             return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
@@ -59,7 +60,8 @@ class Quote(object):
 
         def response(user_input):
             stop_words = set(nltk.corpus.stopwords.words("english"))
-            Tfidf = TfidfVectorizer(tokenizer=LemNormalize, stop_words=stop_words)
+            Tfidf = TfidfVectorizer(
+                tokenizer=LemNormalize, stop_words=stop_words)
             tfidf = Tfidf.fit_transform(sent_tokenizer)
             vals = cosine_similarity(tfidf[-1], tfidf)
             idx = vals.argsort()[0][-2]
