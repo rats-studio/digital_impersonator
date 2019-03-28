@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trump Tweet & Meme Gen.</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!--- Jumbotron  contains logo and header -->
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-4">
+				<img src="/static/img/rats_logo.png">
+			</div>
+			<div class="col-5 align-content-center">
+				<img src="/static/img/header.png">
+			</div>
+			<div class="col-3">
+			</div>
+		</div>
+	</div>
+
+	<!--- Dropdown-Options and Generate-Button Section -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<p>Use the dropdown to choose between generating Tweet or Meme</p>
+			</div>
+			<div class="col">
+				<div class="dropdown">
+					<button class="btn btn-outline-secondary btn-xl dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Generate
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Tweet</a>
+						<a class="dropdown-item" href="#">Meme</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+			</div>
+		</div>
+	</div>
+
+	<!--- Output Section -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-1">
+			</div>
+			<div class="col-7">
+				<img src="/static/img/unrealdonaldtrump.jpg">
+				<!-- <p class="update-self"></p> -->
+			</div>
+			<div class="col-4">
+				<figure class="image center is-100x100">
+					<img src="/static/img/donald-trump-3166237_960_720.png">
+				</figure>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<form method="post">
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Input:</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" style="height: 150px"
+					name="user_input"></textarea>
+			</div>
+			<button class="btn btn-primary mb-3" type="submit" value="submit">Submit</button>
+		</form>
+
+		<input class="form-control" type="text" style="height:150px" placeholder="{% if output %}{{ output }} {% endif %}"
+			readonly>
+	</div>
+
+	<!--- Footer -->
+	<footer>
+		<div class="containter-fluid padding bg-dark">
+			<div class="row text-center">
+				<div class="col-md-6">
+					<p class="text-light">R.A.T.S. 2018</p>
+					<a class="buttons">
+						<a href="https://github.com/rats-studio/digital_impersonator" class="button is-small">
+							<span class="icon-git is-small">
+								<i class="fab fa-github"></i>
+							</span>
+							<span class="text-light">GitHub</span>
+						</a>
+					</a>
+				</div>
+				<div class="col-md-6">
+					<p class="text-light">By using this site you agree to our</p>
+					<a class="text-light" href="terms_and_conditions.html" class="btn-terms btn-sm active" role="button"
+						aria-pressed="true">Terms & Conditions</a>
+				</div>
+				<div class="col-12">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
