@@ -1,6 +1,8 @@
 import random
 import string
 
+from memify import Meme
+
 import nltk
 # Uncomment and run only once - Kent
 # nltk.download("stopwords")
@@ -75,8 +77,18 @@ class Quote(object):
         word_tokens = word_tokenizer+nltk.word_tokenize(user_input)
         final_words = list(set(word_tokens))
 
-        return response(user_input)
+
+        # create Meme-obj with the response generated from Quote.reponse
+        output = response(user_input)
+        meme = Meme(output) 
+        filename = meme.save() # meme.save() returns the name of the saved image
+
+        return filename
 
 
 if __name__ == "__main__":
-    print(Quote.quote(input("Input something\n> ")))
+    #print(Quote.quote(input("Input something\n> ")))
+    response = Quote.quote("This is just a test-string")
+    meme = Meme(response)
+    meme.display()
+

@@ -29,6 +29,7 @@
 		</div>
 	</div>
 
+
 	<!--- Dropdown-Options and Generate-Button Section -->
 	<div class="container-fluid">
 		<div class="row">
@@ -52,22 +53,33 @@
 		</div>
 	</div>
 
+
+
 	<!--- Output Section -->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-1">
+
 			</div>
 			<div class="col-7">
-				<img src="/static/img/unrealdonaldtrump.jpg">
+            
+            {% if response %}
+                <img src="/static/img/images_tmp/{{response}}" class="img-fluid" alt="Responsive image">
+
+                <!-- below is code for the twitter img -->
+                <!--<img src="/static/img/unrealdonaldtrump.jpg">-->
 				<!-- <p class="update-self"></p> -->
+            {% endif %}
 			</div>
 			<div class="col-4">
 				<figure class="image center is-100x100">
 					<img src="/static/img/donald-trump-3166237_960_720.png">
+                    
 				</figure>
 			</div>
 		</div>
 	</div>
+
 
 	<div class="container">
 		<form method="post">
