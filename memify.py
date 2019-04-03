@@ -11,7 +11,8 @@ from PIL import ImageFont
 FONT_SIZE = 25
 LIMIT = 27
 BORDER_SIZE = 1
-IMG_FOLDER = os.path.join("client", "static", "img", "images_tmp")
+MEMES_FOLDER = os.path.join("client", "static", "img", "memes")
+SAMPLE_PICS = os.path.join("client", "static", "img", "sample_img")
 FONT_FAMILY = "Arial.ttf"
 
 
@@ -22,15 +23,17 @@ class Meme:
                  font_size = FONT_SIZE,
                  limit = LIMIT,
                  border_size = BORDER_SIZE,
-                 img_folder = IMG_FOLDER,
+                 memes_folder = MEMES_FOLDER,
+                 sample_pics = SAMPLE_PICS,
                  font_family = FONT_FAMILY
     ):
         self.text = text
         self.font_size = font_size
         self.limit = limit
         self.border_size = border_size
-        self.img_folder = img_folder
+        self.memes_folder = memes_folder
         self.font_family = font_family
+        self.sample_pics = sample_pics
 
         self.img = self._get_random_image()
 
@@ -73,8 +76,8 @@ class Meme:
             )
      
     def _get_random_image(self):
-        pics = len(os.listdir(self.img_folder))  # how many pictures
-        random_pic = os.path.join(self.img_folder, f"trump_{randint(0, pics-2)}.jpg")
+        pics = len(os.listdir(self.sample_pics))  # how many pictures
+        random_pic = os.path.join(self.sample_pics, f"trump_{randint(0, pics-2)}.jpg")
         im = Image.open(random_pic).convert("RGBA")
         return self._resize_img(im)
 
@@ -110,7 +113,7 @@ class Meme:
 
     def save(self):
         filename = f"{int(time.time())}.jpg"
-        file_path = os.path.join(IMG_FOLDER, filename)
+        file_path = os.path.join(MEMES_FOLDER, filename)
         self.meme.convert("RGB").save(file_path)
         print("LOOKIE HERE FROM memify", filename)
         return filename
