@@ -38,8 +38,8 @@
 			</div>
 			<div class="col">
 				<div class="dropdown">
-					<button class="btn btn-outline-secondary btn-xl dropdown-toggle" type="button" id="dropdownMenuButton"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-outline-secondary btn-xl dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Generate
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -62,19 +62,19 @@
 
 			</div>
 			<div class="col-7">
-            
-            {% if response %}
-                <img src="/static/img/memes/{{response}}" class="img-fluid" alt="Responsive image">
 
-                <!-- below is code for the twitter img -->
-                <!--<img src="/static/img/unrealdonaldtrump.jpg">-->
+				{% if response %}
+				<img src="/static/img/memes/{{response}}" class="img-fluid" alt="Responsive image">
+
+				<!-- below is code for the twitter img -->
+				<!--<img src="/static/img/unrealdonaldtrump.jpg">-->
 				<!-- <p class="update-self"></p> -->
-            {% endif %}
+				{% endif %}
 			</div>
 			<div class="col-4">
 				<figure class="image center is-100x100">
 					<img src="/static/img/donald-trump-3166237_960_720.png">
-                    
+
 				</figure>
 			</div>
 		</div>
@@ -85,14 +85,12 @@
 		<form method="post">
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Input:</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" style="height: 150px"
+				<textarea class="form-control" id="exampleFormControlTextarea1" style="height: 50px"
 					name="user_input"></textarea>
 			</div>
 			<button class="btn btn-primary mb-3" type="submit" value="submit">Submit</button>
 		</form>
 
-		<input class="form-control" type="text" style="height:150px" placeholder="{% if output %}{{ output }} {% endif %}"
-			readonly>
 	</div>
 
 	<!--- Footer -->
@@ -112,7 +110,7 @@
 				</div>
 				<div class="col-md-6">
 					<p class="text-light">By using this site you agree to our</p>
-					<a class="text-light" href="terms_and_conditions.html" class="btn-terms btn-sm active" role="button"
+					<a class="text-light" href="/toc/" class="btn-terms btn-sm active" role="button"
 						aria-pressed="true">Terms & Conditions</a>
 				</div>
 				<div class="col-12">
