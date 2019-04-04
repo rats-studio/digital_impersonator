@@ -13,9 +13,9 @@ def send_recieve(to_send):
     post_request = requests.post(
         "http://127.0.0.1:5001/getquote/", json=to_send
     )
-    
+
     # Hacky fix - for some reason a magic pair of quotes appears around the response-object.
-    # So I sliced those motherfuckers right off. - Kent Martin 
+    # So I sliced those motherfuckers right off. - Kent Martin
     ret_val = post_request.text[1:-2]
     return ret_val
 
@@ -33,3 +33,7 @@ def index():
     return render_template("index.html", response=response)
 
 
+@app.route("/toc/", methods=["GET"])
+def toc():
+
+    return render_template("terms_and_conditions.html")
