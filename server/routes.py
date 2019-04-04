@@ -2,14 +2,14 @@ from server import app, api
 from flask import request
 from flask_restful import Resource
 import requests
-from server.back_end_processor import Quote
+import server.back_end_processor as be
 
 
 class GetQuote(Resource):
 
     def post(self):
         user_input = request.get_json()
-        response = Quote.quote(user_input["user_input"])
+        response = be.quote(user_input["user_input"])
         return response
 
 
