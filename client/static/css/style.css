@@ -1,58 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-html, body  {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222;
 }
+
 .jumbotron {
   padding-top: 20px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   background-color: #d19423;
 }
+
 .btn-primary {
   background-color: #6648b1;
   border: 1px solid #6648b1;
 }
+
 .btn-primary:hover {
   background-color: #563d7c;
   border: 1px solid #563d7c;
 }
+
 .btn-terms {
   background-color: #343a40;
   border: 1px solid #343a40;
 }
+
 .btn-terms:hover {
   background-color: #343a40;
   border: 1px solid #343a40;
 }
+
 .container-fluid {
   background-color: #ffffff;
 }
+
 .icon-git {
   color: #ffffff
 }
+
 .update-self {
   font-style: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-
-
-
-
+.col-4 img {
+  width: 200px;
+}
 
 
 /*---Media Queries --*/
-@media (max-width: 992px) {
+@media (max-width: 992px) {}
 
-  }
-@media (max-width: 768px) {
-  
-}
-@media (max-width: 576px) {
-  
-}
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
 
 
 /*---Firefox Bug Fix --*/
@@ -63,13 +67,15 @@ html, body  {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
 /*--- Fixed Background Image --*/
 figure {
   position: relative;
   width: 100%;
   height: 60%;
-  margin: 0!important;
+  margin: 0 !important;
 }
+
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
   position: absolute;
@@ -78,6 +84,7 @@ figure {
   width: 100%;
   height: 100%;
 }
+
 #fixed {
   background-image: url('img/mac.png');
   position: fixed;
@@ -89,17 +96,14 @@ figure {
   background-size: cover;
   background-position: center center;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
 }
+
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+  padding: 1rem;
 }
-
-
-
-
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
@@ -117,11 +121,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
-
