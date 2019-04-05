@@ -20,4 +20,4 @@ Run the impersonator by executing `run-services.py`, or run the two services sep
 
 **IMAGE COPYRIGHT** 
 
-We are aware that using images from online sources can lead to copyright infingement. However, based on this article, (https://thelawtog.com/memes-violate-copyright-law/), for educational purposes and derivative work, especially for nonprofit educational purposes, gives us the "right" to use the images collected. 
+We are aware that using images from online sources can lead to copyright infingement. However, based on this article, (https://thelawtog.com/memes-violate-copyright-law/), for educational purposes and derivative work, especially for nonprofit educational purposes, we have the "right" to use the images collected. 
