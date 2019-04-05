@@ -23,5 +23,6 @@ Run the impersonator by executing `run-services.py`, or run the two services sep
 We are aware that using images from online sources can lead to copyright infingement. However, based on this article, (https://thelawtog.com/memes-violate-copyright-law/), for educational purposes and derivative work, especially for nonprofit educational purposes, we have the "right" to use the images collected. 
 
 **Templates inspiration**
+
 We tried to model the templates to be as close to "the real deal" as possible. We therefore chose from here some good examples:
 https://allthatsinteresting.com/donald-trump-quotes
