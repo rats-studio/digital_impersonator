@@ -18,5 +18,6 @@ Run the impersonator by executing `run-services.py`, or run the two services sep
 
 * In order to have better control over GitHub and presentable portfolio deliveries (data cleanup and analysis), Jupyter notebooks have not been commited to GitHub, but have been sent directly to the "integration" team. 
 
-** IMAGE COPYRIGHT ** 
+**IMAGE COPYRIGHT** 
+
 We are aware that using images from online sources can lead to copyright infingement. However, based on this article, (https://thelawtog.com/memes-violate-copyright-law/), for educational purposes and derivative work, especially for nonprofit educational purposes, gives us the "right" to use the images collected. 
