@@ -1,6 +1,6 @@
 # Digital impersonator
 
-Digital impersonator is a project about using nltk and a RESTful API in Flask to impersonate someone based on a corpus.
+Digital impersonator is a project about using spaCy, Markov chains/markovify and a RESTful API in Flask to impersonate Donald Trump based on a corpus of data - Tweets or speeches. The front-end displays Donald Trump images with our generated text on them, clearly stating that it is a bot behind. 
 
 Run the impersonator by executing `run-services.py`, or run the two services seperatly (being `run-client.py` and `run-server.py`).
 
@@ -8,3 +8,10 @@ Run the impersonator by executing `run-services.py`, or run the two services sep
 
 * Implement HTTPS
 * think about config.py-file for settings (handy for future security-stuff as well)
+
+**Who did what**
+
+* Middleware: Mathias and Kent
+* Front-end: Ørjan
+* NLP/NLG: Anca
+* Back-end: Mathias and Kent
