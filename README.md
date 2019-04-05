@@ -15,6 +15,8 @@ Run the impersonator by executing `run-services.py`, or run the two services sep
 * Front-end: Ørjan
 * NLP/NLG: Anca
 * Back-end: Mathias and Kent
+* Ethical research: Anca/Ørjan
+* Git overview: Kent/Mathias
 
 * In order to have better control over GitHub and presentable portfolio deliveries (data cleanup and analysis), Jupyter notebooks have not been commited to GitHub, but have been sent directly to the "integration" team. 
 
