@@ -483,7 +483,7 @@ def markov():
             
         def make_short_tweet(self):
             tw = self.model.make_short_sentence(140)
-            return "@RATSTrump: \n" + str(tw)
+            return "@RATSTrump: " + str(tw)
 
     # df = pd.read_csv("tweets_trump1.csv", low_memory = False)
 
