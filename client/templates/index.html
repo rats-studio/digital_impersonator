@@ -34,9 +34,18 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
+            <!--
 				<p>Use the dropdown to choose between generating Tweet or Meme</p>
+            -->
+                <p>Create meme using either Markov or Spacy:</p>
 			</div>
 			<div class="col">
+            
+            <form method="post">
+                <button class="btn btn-primary mb-3" name="user_input" type="submit" value="markov">Markov</button>
+
+                <button class="btn btn-primary mb-3" name="user_input" type="submit" value="spacy">Spacy</button>
+            <!--
 				<div class="dropdown">
 					<button class="btn btn-outline-secondary btn-xl dropdown-toggle" type="button"
 						id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,6 +56,7 @@
 						<a class="dropdown-item" href="#">Meme</a>
 					</div>
 				</div>
+             -->
 			</div>
 			<div class="col">
 			</div>
@@ -80,19 +90,16 @@
 		</div>
 	</div>
 
-
+<!--
 	<div class="container">
 		<form method="post">
-			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Input:</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" style="height: 50px"
-					name="user_input"></textarea>
-			</div>
-			<button class="btn btn-primary mb-3" type="submit" value="submit">Submit</button>
+			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="markov">Markov</button>
+
+			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="spacy">Spacy</button>
 		</form>
 
 	</div>
-
+-->
 	<!--- Footer -->
 	<footer>
 		<div class="containter-fluid padding bg-dark">
