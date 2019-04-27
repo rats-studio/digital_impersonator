@@ -30,33 +30,14 @@
 	</div>
 
 
-	<!--- Dropdown-Options and Generate-Button Section -->
+	<!--- Generate-Button Section -->
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col">
-				<p>Use the dropdown to choose between generating Tweet or Meme</p>
-			</div>
+		<p>Click to generate with either markov or spaCy:</p>
+		<form method="post">
+			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="markov">Markov</button>
 
-				<div class="dropdown">
-					<button class="btn btn-outline-secondary btn-xl dropdown-toggle" type="button"
-						id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Generate
-					</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Tweet</a>
-						<a class="dropdown-item" href="#">Meme</a>
-					</div>
-				</div>
-			<div class="col">
-            
-            <form method="post">
-                <button class="btn btn-primary mb-3" name="user_input" type="submit" value="markov">Markov</button>
-
-                <button class="btn btn-primary mb-3" name="user_input" type="submit" value="spacy">Spacy</button>
-			</div>
-			<div class="col">
-			</div>
-		</div>
+			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="spacy">Spacy</button>
+	</div>
 	</div>
 
 
@@ -64,8 +45,7 @@
 	<!--- Output Section -->
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-8">
-
+			<div class="col-12">
 				{% if response %}
 				<img src="/static/img/memes/{{response}}" class="img-fluid" alt="Responsive image">
 
@@ -74,50 +54,31 @@
 				<!-- <p class="update-self"></p> -->
 				{% endif %}
 			</div>
-			<div class="col-4">
-				<figure class="image center is-100x100">
-					<img src="/static/img/donald-trump-3166237_960_720.png">
-
-				</figure>
-			</div>
 		</div>
-	</div>
 
-<!--
-	<div class="container">
-		<form method="post">
-			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="markov">Markov</button>
-
-			<button class="btn btn-primary mb-3" name="user_input" type="submit" value="spacy">Spacy</button>
-		</form>
-
-	</div>
--->
-	<!--- Footer -->
-	<footer>
-		<div class="containter-fluid padding bg-dark">
-			<div class="row text-center" style="margin: 0">
-				<div class="col-md-6">
-					<p class="text-light">R.A.T.S. 2018</p>
-					<a class="buttons">
-						<a href="https://github.com/rats-studio/digital_impersonator" class="button is-small">
-							<span class="icon-git is-small">
-								<i class="fab fa-github"></i>
-							</span>
-							<span class="text-light">GitHub</span>
+		<!--- Footer -->
+		<footer class="footer bg-dark">
+			<div class="container">
+				<div class="row text-center" style="margin: 0">
+					<div class="col-md-6">
+						<p class="text-light">R.A.T.S. 2018</p>
+						<a class="buttons">
+							<a href="https://github.com/rats-studio/digital_impersonator" class="button is-small">
+								<span class="icon-git is-small">
+									<i class="fab fa-github"></i>
+								</span>
+								<span class="text-light">GitHub</span>
+							</a>
 						</a>
-					</a>
-				</div>
-				<div class="col-md-6">
-					<p class="text-light">By using this site you agree to our</p>
-					<a class="text-light" href="/toc/" class="btn-terms btn-sm active" role="button"
-						aria-pressed="true">Terms & Conditions</a>
-				</div>
-				<div class="col-12">
+					</div>
+					<div class="col-md-6">
+						<p class="text-light">By using this site you agree to our</p>
+						<a class="text-light" href="/toc/" class="btn-terms btn-sm active" role="button"
+							aria-pressed="true">Terms & Conditions</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
 </body>
 
