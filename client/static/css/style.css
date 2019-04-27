@@ -42,14 +42,25 @@ body {
   color: #ffffff
 }
 
-.update-self {
-  font-style: 'Poppins', Arial, Helvetica, sans-serif;
-}
-
 .col-4 img {
   width: 200px;
 }
 
+.container-fluid {
+  margin: 0 auto;
+}
+
+.footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+footer,
+.footer {
+  height: 4em;
+}
 
 /*---Media Queries --*/
 @media (max-width: 992px) {}
@@ -58,23 +69,6 @@ body {
 
 @media (max-width: 576px) {}
 
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-
-/*--- Fixed Background Image --*/
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0 !important;
-}
 
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
@@ -104,20 +98,3 @@ figure {
 [class*="col-"] {
   padding: 1rem;
 }
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
